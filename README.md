@@ -11,15 +11,15 @@
   - peek()	返回队列头部的元素 如果队列为空则返回Null
 - Queue：接口和实现类
   - BlockingQueue:阻塞队列 不允许插入null值，增加入队方法put(),出队方法take(),以及超时offer和poll，常用语生产者和消费者模式，阻塞用到了ReentrantLock
-	- ArrayBlockingQueue:数组结构构成的有界阻塞队列，需要指定大小（和公平和非公平锁，初始化的时候加入默认集合）
-	- LinkedBlockingQueue:链表结构组成的有界阻塞队列（大小为Integer.Max_Value）
-	- PriorityBlockingQueue:支持优先级排序的无界阻塞队列
-	- SynchronousQueue:不储存元素的阻塞队列
-	- LinkedTransferQueue:链表结构的无界阻塞队列
-	- LinkedBlockingDeque:链表结构的双线阻塞队列
+    - ArrayBlockingQueue:数组结构构成的有界阻塞队列，需要指定大小（和公平和非公平锁，初始化的时候加入默认集合）  [阻塞队列解析](https://blog.csdn.net/javazejian/article/details/77410889 "LinkedBlockingQueue ArrayBlockingQueue")
+    - LinkedBlockingQueue:链表结构组成的有界阻塞队列（大小为Integer.Max_Value）建议手动添加大小防止造成机器负担，与ArrayBlockingQueue的区别是使用takeLock和putLock两个对并发控制，添加和删除不是互斥的，吞吐量比ArrayBlockingQueue要大
+    - PriorityBlockingQueue:支持优先级排序的无界有序阻塞队列，不支持插入null元素，不支持插入非comparable
+    - SynchronousQueue:不储存元素的阻塞队列
+    - LinkedTransferQueue:链表结构的无界阻塞队列
+    - LinkedBlockingDeque:链表结构的双线阻塞队列
   - PriorityQueue：
   - Deque:双端队列
-  
+
 ####  集合
 - Set：
 - List：

@@ -21,7 +21,11 @@
   - Deque:双端队列
 
 ####  集合
-- Set：
+- Set：set集合是一种不包含重复元素的无序集合, Set集合中主要有两个实现类：HashSet类和TreeSet类 。实现该接口只能使用增强for循环和迭代器来循环，因为实现该接口无下标，添加多个重复只有一个添加成功
+	- HashSet:HashSet类是对AbstractSet类的扩张，该类实现了 `Set`接口，通过一个哈希表支持（实际上是一个 `HashMap`实例）， 它没有保证的集合的迭代顺序，hashmap 哈希表边存放的是哈希值，HashSet通过hashcode和equals方法进行判断元素是否重复。注意该实现不同步，如果多个线程访问一个散列集的同时，并至少有一个线程修改的集合，它必须同步外部。HashSet集合采用通过hash算法来决定元素的存储位置不同
+	- linkedHashSet: 是一个双向链表，保证插入的元素是有序的
+    - TreeSet:实现Set集合的有序集合，TreeSet采用二叉树的数据结构来存储集合元素，TreeSet对加入元素默认按照升序进行排序，
+      - TreeSet的排序原理：TreeSet调用元素的compareTo方法来比较元素之间的大小关系，然后将元素按升序或降序排列，因此待加入的元素必须实现compareTo方法，并通过compareTo方法比较两个元素内容的大小
 - List：
 
 
